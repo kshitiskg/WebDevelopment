@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <h2>Data Binding</h2>
+                <p>Allows us to bind data from component.ts to .html and send data from .html to .ts.</p>
+                <ul>
+                    <li>One Way Data Binding</li>
+                    <li>Two Way data binding</li>
+                </ul>
+                <h3>1.one way data binding</h3>
+                <ul>
+                    <li>Interpolation -
+                         <!-- {{}} -->
+                        </li>
+                        <li>Property Binding
+                            <!-- [value]='title' -->
+                        </li>
+                        <li>Event Binding 
+                            <!-- (event)='function()' -->
+                        </li>
+                </ul>
+                <p>Note : Interpolation and property binding - from .ts to .html and event Binding - from .ts to .html</p>
+                <h3>Example of Interpolation</h3>
+                <p>{{name}}</p>
+                <b>{{number}}</b>
+                <h3>Example of Property Binding</h3>
+                <input type="text" [value]="inputValue" [placeholder]="inputPlaceholder" class="from-control">
+                <img [src]="imageURL" class="img-fluid" [alt]="imageCaption" >
+                <h3>Example of Event Binding</h3>
+                <button type="button" class="btn btn-primary" (click)="welcomeMsg()">Click</button>
+
+                <h3>2.Two way data binding</h3>
+                <!-- [(ngModel)]="value" -->
+
+                <input type="text" placeholder="Enter Your Name" class="from-control"  [(ngModel)]="userName">
+                <p>{{userName}}</p>
+
+                <input type="checkbox" [(ngModel)]="isChecked">
+                {{isChecked ? 'Subscribe' :'Not Subscribe'}}
+            </div>
+        </div>
+    </div>
+</div>
