@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-5 m-5">
+                <div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Simple To-Do List</h2>
+                        </div>
+                        <div class="col-6">
+                            <input placeholder="Enter a task" class="form-control" [(ngModel)]="newText" />
+
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary mx-5" (click)="addTask()">Add</button>
+
+                            <button class="btn btn-danger mx-5" (click)="removeAllTask()">Remove All</button>
+                        </div>
+                        <div class="col-12">
+                            <ul class="mt-5">
+                                <li class="my-2" *ngFor="let list of task;let i=index">
+                                    {{list}}
+                                    <button class="btn btn-danger mx-5" (click)="removeTask(i)">Remove</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

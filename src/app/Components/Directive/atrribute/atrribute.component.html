@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Attribute Directive</h1>
+            <ul>
+                <li>ngClass</li>
+                <li>ngStyle</li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="p-3 border" [ngClass]="{ 'highlight':isActive }">
+    
+            </div>
+            <button type="button" class="btn btn-info" (click)="hightlight()">Highlight</button>
+        </div>
+        <div class="col-3">
+            <div [ngStyle]="{'color':isActive ? 'green':'red'}">
+                Conditional Styling
+            </div>
+        </div>
+        <div class="col-3">
+            <div appCustom>
+                Hover to hightlight
+            </div>
+        </div>
+    </div>
+</div>
