@@ -6,11 +6,12 @@ import { TodolistComponent } from './Projects/todolist/todolist.component';
 import { StructuralComponent } from './Components/Directive/structural/structural.component';
 import { AtrributeComponent } from './Components/Directive/atrribute/atrribute.component';
 import { PipeComponent } from './Components/Pipe/pipe/pipe.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BaiscComponent,TestingComponent,TodolistComponent,StructuralComponent,AtrributeComponent,PipeComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
