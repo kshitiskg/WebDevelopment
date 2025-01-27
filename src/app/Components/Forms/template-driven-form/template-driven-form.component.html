@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="card p-5 mt-5">
+
+        <div class="row">
+            <div class="col-12">
+                <h1>Template Driven Form with validation</h1>
+                <hr class="my-3">
+            </div>
+
+        </div>
+        <form #userForm="ngForm">
+            <div class="row">
+                <div class="col-6">
+                    <label for="">Name</label>
+                    <input type="text" name="name" id="name" #name="ngModel" class="form-control" [(ngModel)]="userObj.name" minlength="3" required>
+                    <div class="text-danger" *ngIf="name.invalid && (name.touched || name.dirty)">
+                        <span *ngIf="name.errors?.['required']">This is required</span>
+                        <span *ngIf="name.errors?.['minlength']">Min 3 chars needed</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="">Email</label>
+                    <input type="text" name="email" #email="ngModel" id="eamil" class="form-control" [(ngModel)]="userObj.email" required >
+                    <div class="text-danger" *ngIf="email.invalid && (email.touched || email.dirty)">
+                        <span  *ngIf="email.errors?.['required']">Email is required</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="">Password</label>
+                    <input type="text" name="password" #pass="ngModel" id="password" class="form-control" [(ngModel)]="userObj.password" required>
+                    <div class="text-danger"  *ngIf="pass.invalid && (pass.touched || pass.dirty)">
+                        <span *ngIf="pass.errors?.['required']">Password is required</span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="my-5">
+                        <button type="button" [disabled]="userForm.invalid" class="btn btn-primary w-100" (click)="onSubmit(userForm)">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Json (Object Key-value Pair) -->
+ <!-- - parse - convert string to object
+ -Stringify - convert object or array to string -->

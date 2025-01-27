@@ -6,6 +6,7 @@ import { AtrributeComponent } from './Components/Directive/atrribute/atrribute.c
 import { StructuralComponent } from './Components/Directive/structural/structural.component';
 import { PipeComponent } from './Components/Pipe/pipe/pipe.component';
 import { TodolistComponent } from './Projects/todolist/todolist.component';
+import { TemplateDrivenFormComponent } from './Components/Forms/template-driven-form/template-driven-form.component';
 
 export const routes: Routes = [
     {
@@ -36,6 +37,10 @@ export const routes: Routes = [
            {
             path:'todolist',
             component:TodolistComponent
+           },
+           {
+            path:'templatedrivenform',
+            component:TemplateDrivenFormComponent
            }
 
         ]
