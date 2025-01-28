@@ -7,6 +7,7 @@ import { StructuralComponent } from './Components/Directive/structural/structura
 import { PipeComponent } from './Components/Pipe/pipe/pipe.component';
 import { TodolistComponent } from './Projects/todolist/todolist.component';
 import { TemplateDrivenFormComponent } from './Components/Forms/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './Components/Forms/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     {
@@ -41,6 +42,10 @@ export const routes: Routes = [
            {
             path:'templatedrivenform',
             component:TemplateDrivenFormComponent
+           },
+           {
+            path:'reactiveform',
+            component:ReactiveFormComponent
            }
 
         ]
