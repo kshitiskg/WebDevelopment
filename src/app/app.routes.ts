@@ -46,6 +46,14 @@ export const routes: Routes = [
            {
             path:'reactiveform',
             component:ReactiveFormComponent
+           },
+           {
+               path:'leazy',
+               loadChildren:() => import('./Components/leazyLoading/leazy/leazy.module').then((m)=> m.LeazyModule)
+           },
+           {
+            path:'demo',
+            loadChildren:()=> import('./Components/demo/demo.module').then(a=> a.DemoModule)
            }
 
         ]
