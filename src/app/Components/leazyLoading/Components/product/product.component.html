@@ -1,6 +1,58 @@
-<h1>Product Works</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <table class="table table-bordered">
+              <tr>
+                <th>Sr No</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+              <tr *ngFor="let list of data ; let i=index">
+                <td >{{i+1}}</td>
+                <td>{{list.title}}</td>
+                <td>{{list.body}}</td>
+                <td>
+                    <button type="button" class="btn btn-success text-dark" (click)="onEdit(list)">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger text-dark" (click)="onDelete(list.id)">Del</button>
+                </td>
+              </tr>
+            </table>
+        </div>
+        <div class="col-5">
+            <h2>Form</h2>
+            <div class="card shadow p-2">
+            <form action="">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Title</label>
+                        <input type="text" name="title" class="form-control" [(ngModel)]="postsObj.title">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Description</label>
+                        <textarea name="description" cols="30" rows="10" class="form-control"
+                        [(ngModel)]="postsObj.body"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary my-3 mx-2" *ngIf="postsObj.id == 0" (click)="onSave()">Submit</button>
+                        <button type="button" class="btn btn-primary my-3 mx-2"*ngIf="postsObj.id !== 0" (click)="onUpdate()">Update</button>
+
+                        <button type="button" class="btn btn-primary my-3  mx-2" (click)="onClear()">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <h1>Product Works</h1>
 <button type="button" class="btn btn-primary" >Get All Data</button>
 
 <ul>
     <li *ngFor="let list of data">{{list.title}}</li>
-</ul>
+</ul> -->
