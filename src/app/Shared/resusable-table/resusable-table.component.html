@@ -1,0 +1,19 @@
+<table class="table border">
+    <thead>
+        <tr>
+            <th *ngFor="let col of colums">{{col}}</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of data">
+            <td *ngFor="let col of colums">{{list[col]}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="Edit(list)">Edit</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="Delete(list)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

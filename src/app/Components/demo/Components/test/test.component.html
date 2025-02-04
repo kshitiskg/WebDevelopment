@@ -1,1 +1,9 @@
-<p>test works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+         <app-resusable-table [colums]="tableColums" [data]="tableData" (onEdit)="editRecord($event)"
+         (onDelete)="deleteRecord($event)"
+         ></app-resusable-table>
+        </div>
+    </div>
+</div>
