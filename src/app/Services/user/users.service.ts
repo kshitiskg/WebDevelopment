@@ -27,4 +27,27 @@ export class UsersService {
 
       // https://jsonplaceholder.typicode.com/posts/1
   }
+
+  // Goals Users services
+
+  getAllUsers():Observable<any>{
+    return this.http.get("https://freeapi.gerasim.in/api/Goals/GetAllUsers");
+ 
+  }
+
+  createNewUser(obj:any):Observable<any>{
+   return this.http.post("https://freeapi.gerasim.in/api/Goals/createNewUser",obj);
+  }
+
+  getUserById(id:number):Observable<any>{
+   return this.http.get(`https://freeapi.gerasim.in/api/Goals/GetUserById?id=${id}`)
+  }
+
+  updateUser(obj:any):Observable<any>{
+   return this.http.put("https://freeapi.gerasim.in/api/Goals/updateUser",obj)
+  }
+
+  deleteById(id:number):Observable<any>{
+    return this.http.get(`https://freeapi.gerasim.in/api/Goals/DeleteUserById?id=${id}`)
+  }
 }
